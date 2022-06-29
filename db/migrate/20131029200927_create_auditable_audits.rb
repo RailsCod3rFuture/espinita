@@ -1,4 +1,4 @@
-class CreateAuditableAudits < ActiveRecord::Migration
+class CreateAuditableAudits < ActiveRecord::Migration[6.0]
   def change
     create_table :espinita_audits do |t|
       t.references :auditable, polymorphic: true, index: true
